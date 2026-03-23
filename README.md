@@ -202,56 +202,7 @@ test('TC-999 Verify my new button works', async ({ page }) => {
 });
 ```
 
----
 
-## CI/CD Integration
-
-The framework is ready for GitHub Actions. Add this file to your repo:
-
-**`.github/workflows/e2e.yml`**
-
-```yaml
-name: Beva E2E Tests
-
-on:
-  push:
-    branches: [main, develop]
-  pull_request:
-    branches: [main]
-
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      - run: npm ci
-      - run: npx playwright install --with-deps chromium
-      - run: npm test
-        env:
-          BASE_URL: ${{ secrets.BASE_URL }}
-          PLAYER_EMAIL: ${{ secrets.PLAYER_EMAIL }}
-          PLAYER_PASSWORD: ${{ secrets.PLAYER_PASSWORD }}
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: playwright-report
-          path: playwright-report/
-```
-
-Add these **GitHub Secrets** in your repo Settings → Secrets:
-
-| Secret | Value |
-|---|---|
-| `BASE_URL` | `https://beva.inheritxdev.in` |
-| `PLAYER_EMAIL` | `player1@beva.com` |
-| `PLAYER_PASSWORD` | `Test@123456` |
-
----
-
-## Troubleshooting
 
 | Problem | Solution |
 |---|---|
