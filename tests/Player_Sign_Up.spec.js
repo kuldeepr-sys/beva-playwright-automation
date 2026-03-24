@@ -208,7 +208,11 @@ test.describe('Player Sign Up', () => {
   });
 
 //   // TC-050 — your exact logic
+<<<<<<< HEAD
   test('TC-050 [High] Verify user is able to sign up by clicking Create Account', async ({ page }) => {
+=======
+  test.only('TC-050 [High] Verify user is able to sign up by clicking Create Account', async ({ page }) => {
+>>>>>>> a8e4828bbc16631dce019b90f1c7dcd6a535e07a
     await signUpPage.firstNameInput.fill('First');
     await signUpPage.lastNameInput.fill('Player');
     await signUpPage.emailInput.fill('mihiy93024@pazard.com');

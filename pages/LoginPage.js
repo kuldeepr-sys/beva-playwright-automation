@@ -9,6 +9,7 @@ class LoginPage extends BasePage {
   constructor(page) {
     super(page);
     // ── Fields ────────────────────────────────────────────────
+<<<<<<< HEAD
     // Real placeholder on live site is "Email Address" (not "name@example.com")
     this.emailInput    = page.getByPlaceholder('Email Address');
     this.passwordInput = page.getByPlaceholder('Password');
@@ -19,6 +20,15 @@ class LoginPage extends BasePage {
     this.forgotLink    = page.getByRole('link', { name: 'Forgot Password' });
     this.signUpLink    = page.getByRole('link', { name: 'Sign Up' });
     // ── Error messages ─────────────────────────────────────────
+=======
+    this.emailInput    = page.getByPlaceholder('name@example.com');
+    this.passwordInput = page.getByPlaceholder('Password');
+    this.signInBtn     = page.getByRole('button', { name: 'Sign In ', exact: true }).first();
+    this.eyeIcon       = page.getByRole('button', { name: 'Show password' });
+    this.forgotLink    = page.getByRole('link', { name: 'Forgot Password' });
+    this.signUpLink    = page.getByRole('link', { name: 'Sign Up' });
+    // ── Error messages (real text from app) ───────────────────
+>>>>>>> a8e4828bbc16631dce019b90f1c7dcd6a535e07a
     this.emailRequiredMsg    = page.getByText('Email address is required.');
     this.passwordRequiredMsg = page.getByText('Password is required');
     this.invalidEmailMsg     = page.getByText('Please enter a valid email address.');
@@ -27,7 +37,12 @@ class LoginPage extends BasePage {
 
   async open() {
     await this.goto(ROUTES.LOGIN);
+<<<<<<< HEAD
     await this.emailInput.waitFor({ state: 'visible', timeout: 30_000 });
+=======
+    // Wait for email field — login page is a React SPA and needs time to render
+    await this.emailInput.waitFor({ state: 'visible', timeout: 15_000 });
+>>>>>>> a8e4828bbc16631dce019b90f1c7dcd6a535e07a
   }
 
   async fillEmail(email)       { await this.fillField(this.emailInput, email); }
