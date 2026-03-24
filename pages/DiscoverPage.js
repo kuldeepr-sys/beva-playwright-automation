@@ -8,17 +8,21 @@ class DiscoverPage extends BasePage {
   constructor(page) {
     super(page);
     // ── Search & Filters ──────────────────────────────────────
-    this.searchBox          = page.getByPlaceholder('Search by venue or title...');
-    this.disciplineFilter   = page.getByRole('button', { name: 'All Disciplines' });
-    this.typeFilter         = page.getByRole('button', { name: 'All Types' });
+    this.searchBox        = page.getByPlaceholder('Search by venue or title...');
+    this.disciplineFilter = page.getByRole('button', { name: 'All Disciplines' });
+    this.typeFilter       = page.getByRole('button', { name: 'All Types' });
+
     // ── Competition cards ─────────────────────────────────────
-    this.viewDetailsBtn     = page.getByRole('button', { name: 'View Details ' });
-    this.joinCompetitionBtn = page.getByRole('button', { name: 'Join Competition' });
+    // FIX: Use a partial text regex so the locator works regardless of
+    // trailing spaces or casing variations in the live app.
+    this.viewDetailsBtn     = page.getByRole('button', { name: /view details/i });
+    this.joinCompetitionBtn = page.getByRole('button', { name: /join competition/i });
+
     // ── Join modal fields (team/doubles) ──────────────────────
-    this.teamNameInput      = page.getByPlaceholder('Enter team name...');
-    this.teamNameError      = page.getByText('Team name is required.');
-    this.addMemberInput     = page.getByPlaceholder('Search player to join your team... (4 more needed)');
-    this.confirmBtn         = page.getByRole('button', { name: 'Confirm' });
+    this.teamNameInput  = page.getByPlaceholder('Enter team name...');
+    this.teamNameError  = page.getByText('Team name is required.');
+    this.addMemberInput = page.getByPlaceholder(/search player/i);
+    this.confirmBtn     = page.getByRole('button', { name: /confirm/i });
   }
 
   async open() {

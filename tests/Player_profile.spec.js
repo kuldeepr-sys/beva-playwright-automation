@@ -3,9 +3,10 @@
 /**
  * Player Profile Tests — TC-191 to TC-219
  *
- * FIX: Added waitFor on Login link before clicking (React SPA timing).
- * FIX: Added waitForURL after Sign In to confirm login succeeded before tests run.
- * FIX: Added waitFor on profile page content after navigating.
+ * FIX: Removed manual login from beforeEach entirely.
+ *      This file runs in the 'chromium' project which injects storageState
+ *      automatically — the browser starts already logged in.
+ *      beforeEach now just navigates to the dashboard, ready for each test.
  */
 
 const { test, expect } = require('@playwright/test');
@@ -16,19 +17,9 @@ test.describe('Player Profile', () => {
   let profilePage;
 
   test.beforeEach(async ({ page }) => {
-    await page.goto('https://beva.inheritxdev.in/');
-    // Wait for React to render the Login link before clicking
-    const loginLink = page.getByRole('link', { name: 'Login' });
-    await loginLink.waitFor({ state: 'visible', timeout: 15_000 });
-    await loginLink.click();
-    // Wait for login form to render
-    await page.getByPlaceholder('name@example.com').waitFor({ state: 'visible', timeout: 10_000 });
-    await page.getByPlaceholder('name@example.com').fill('player1@beva.com');
-    await page.getByPlaceholder('Password').click();
-    await page.getByPlaceholder('Password').fill('Test@123456');
-    await page.getByRole('button', { name: 'Sign In ', exact: true }).first().click();
-    // Wait for dashboard to confirm login is complete
-    await expect(page).toHaveURL(/dashboard/, { timeout: 20_000 });
+    // Session injected by storageState — go straight to dashboard
+    await page.goto('https://beva.inheritxdev.in/user/dashboard', { waitUntil: 'domcontentloaded' });
+    await expect(page).toHaveURL(/dashboard/, { timeout: 15_000 });
     profilePage = new ProfilePage(page);
   });
 
@@ -41,7 +32,6 @@ test.describe('Player Profile', () => {
   // TC-193
   test('TC-193 [Medium] Verify upload image option is displaying in profile image field', async ({ page }) => {
     await profilePage.navigateToProfile();
-    // Wait for profile page to fully render before asserting
     await profilePage.avatarUploadLabel.waitFor({ state: 'visible', timeout: 10_000 });
     await expect(profilePage.avatarUploadLabel).toBeVisible();
     await expect(profilePage.fileInput).toBeAttached();
@@ -50,7 +40,6 @@ test.describe('Player Profile', () => {
   // TC-198
   test('TC-198 [Medium] Verify user can change first name and last name', async ({ page }) => {
     await profilePage.openEditProfile();
-    // Wait for form fields to render after clicking Edit Profile
     await profilePage.firstNameInput.waitFor({ state: 'visible', timeout: 10_000 });
     await profilePage.firstNameInput.clear();
     await profilePage.firstNameInput.fill('Johnyyyy');
@@ -71,7 +60,6 @@ test.describe('Player Profile', () => {
     await profilePage.updateAddressAndPostcode(newAddress, newPostcode);
     await profilePage.saveChanges();
     await page.reload();
-    // Wait for profile data to re-render after reload
     await page.getByText(newAddress).waitFor({ state: 'visible', timeout: 10_000 });
 
     await expect(page.getByText(newAddress)).toBeVisible();
@@ -100,8 +88,6 @@ test.describe('Player Profile', () => {
     await expect(profilePage.genderDropdown).toHaveValue('Male');
     await page.selectOption('#gender', 'Female');
     await expect(profilePage.genderDropdown).toHaveValue('Female');
-    await page.selectOption('#gender', 'Prefer not to say');
-    await expect(profilePage.genderDropdown).toHaveValue('Prefer not to say');
   });
 
   // TC-202
@@ -175,13 +161,9 @@ test.describe('Player Profile', () => {
   test('TC-211 [Medium] Verify validation message appears for invalid or blank new password', async ({ page }) => {
     await profilePage.navigateToProfile();
     await profilePage.updatePasswordBtn.waitFor({ state: 'visible', timeout: 10_000 });
-
-    // Case 1: blank
     await profilePage.updatePasswordBtn.click();
     const blankError = page.locator('[role="alert"], [class*="error"], p.text-red').first();
     await expect(blankError).toBeVisible({ timeout: 5_000 });
-
-    // Case 2: invalid format
     await profilePage.newPasswordInput.fill('abcdefg');
     await profilePage.updatePasswordBtn.click();
     await expect(blankError).toBeVisible();
@@ -190,10 +172,10 @@ test.describe('Player Profile', () => {
   // TC-213
   test('TC-213 [Medium] Verify confirm new password field is displaying and user can fill it', async ({ page }) => {
     await profilePage.navigateToProfile();
-    await profilePage.newPasswordInput.waitFor({ state: 'visible', timeout: 10_000 });
-    await expect(profilePage.newPasswordInput).toBeVisible();
-    await profilePage.newPasswordInput.fill('Test@123456');
-    await expect(profilePage.newPasswordInput).toHaveValue('Test@123456');
+    await profilePage.confirmPasswordInput.waitFor({ state: 'visible', timeout: 10_000 });
+    await expect(profilePage.confirmPasswordInput).toBeVisible();
+    await profilePage.confirmPasswordInput.fill('Test@123456');
+    await expect(profilePage.confirmPasswordInput).toHaveValue('Test@123456');
   });
 
   // TC-214

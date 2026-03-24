@@ -1,0 +1,1 @@
+TC-105: Player has upcoming competitions — full Discover-only scenario not applicable. To run this TC fully: use a fresh account with no joined competitions.

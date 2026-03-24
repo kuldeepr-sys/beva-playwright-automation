@@ -3,9 +3,10 @@
 /**
  * Player Venues Tests — TC-175 to TC-183
  *
- * FIX: Added waitForURL after login in beforeEach.
- * FIX: Added waitForURL after clicking Venues link.
- * FIX: Added waitFor on searchBox before assertions.
+ * FIX: Removed manual login from beforeEach entirely.
+ *      This file runs in the 'chromium' project which injects storageState
+ *      automatically — the browser starts already logged in.
+ *      beforeEach now just navigates directly to the Venues page.
  */
 
 const { test, expect } = require('@playwright/test');
@@ -16,19 +17,11 @@ test.describe('Player Venues', () => {
   let venuesPage;
 
   test.beforeEach(async ({ page }) => {
-    await page.goto('https://beva.inheritxdev.in/');
-    await page.getByRole('link', { name: 'Login' }).waitFor({ state: 'visible', timeout: 15_000 });
-    await page.getByRole('link', { name: 'Login' }).click();
-    await page.getByPlaceholder('name@example.com').fill('player1@beva.com');
-    await page.getByPlaceholder('Password').click();
-    await page.getByPlaceholder('Password').fill('Test@123456');
-    await page.getByRole('button', { name: 'Sign In ', exact: true }).first().click();
-    await expect(page).toHaveURL(/dashboard/, { timeout: 20_000 });
-    await page.getByRole('link', { name: 'Venues' }).click();
-    await expect(page).toHaveURL(/venues/, { timeout: 10_000 });
+    // Session injected by storageState — go straight to Venues
+    await page.goto('https://beva.inheritxdev.in/user/venues', { waitUntil: 'domcontentloaded' });
+    await expect(page).toHaveURL(/venues/, { timeout: 15_000 });
     venuesPage = new VenuesPage(page);
-    // Wait for search box to confirm page has fully rendered
-    await venuesPage.searchBox.waitFor({ state: 'visible', timeout: 10_000 });
+    await venuesPage.searchBox.waitFor({ state: 'visible', timeout: 15_000 });
   });
 
   // TC-175
