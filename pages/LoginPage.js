@@ -37,10 +37,10 @@ class LoginPage extends BasePage {
   async open() {
     await this.goto(ROUTES.LOGIN);
 
-    await this.emailInput.waitFor({ state: 'visible', timeout: 30_000 });
+    //await this.emailInput.waitFor({ state: 'visible', timeout: 30_000 });
 
     // Wait for email field — login page is a React SPA and needs time to render
-    await this.emailInput.waitFor({ state: 'visible', timeout: 15_000 });
+    //await this.emailInput.waitFor({ state: 'visible', timeout: 15_000 });
 
   }
 

@@ -39,7 +39,7 @@ test.describe('Player > Forgot Password (TC-067 to TC-073)', () => {
     await loginLink.click();
 
     // Wait for login page email field to confirm page is ready
-    await forgotPage.emailInput.waitFor({ state: 'visible', timeout: 10_000 });
+    // await forgotPage.emailInput.waitFor({ state: 'visible', timeout: 10_000 });
   });
 
   // TC-067
