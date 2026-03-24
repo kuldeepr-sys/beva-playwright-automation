@@ -1,0 +1,1 @@
+✅ Auth state saved to C:\Users\inx-User\Desktop\beva-playwright-automation-main\beva-playwright-automation-main\fixtures\auth\player.json

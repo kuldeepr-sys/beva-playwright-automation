@@ -1,0 +1,29 @@
+
+📄 URL: https://beva.inheritxdev.in/user/discover
+
+🔍 Found 10 button(s):
+   button[type="button"] text="Logout" class="flex items-center gap-2 w-full rounded-md px-2 py-3 text-sm "
+   button[type="null"] text="Toggle Sidebar" class="inline-flex items-center justify-center gap-2 whitespace-now"
+   button[type="button"] text="All Disciplines" class="w-full input-cat h-16 px-3 sm:px-4 flex items-center justify"
+   button[type="button"] text="All Types" class="w-full input-cat h-16 px-3 sm:px-4 flex items-center justify"
+   button[type="button"] text="Join Competition" class="whitespace-nowrap focus-visible:outline-none focus-visible:r"
+   button[type="button"] text="Join Competition" class="whitespace-nowrap focus-visible:outline-none focus-visible:r"
+   button[type="button"] text="Join Competition" class="whitespace-nowrap focus-visible:outline-none focus-visible:r"
+   button[type="button"] text="Join Competition" class="whitespace-nowrap focus-visible:outline-none focus-visible:r"
+   button[type="button"] text="Join Competition" class="whitespace-nowrap focus-visible:outline-none focus-visible:r"
+   button[type="button"] text="Join Competition" class="whitespace-nowrap focus-visible:outline-none focus-visible:r"
+
+🔍 Found 13 link(s):
+   a[href="/user/dashboard"] text="Dashboard"
+   a[href="/user/discover"] text="Discover"
+   a[href="/user/my-competitions"] text="My Competitions"
+   a[href="/user/leaderboard"] text="Leaderboard"
+   a[href="/user/venues"] text="Venues"
+   a[href="/user/profile/69a8530b4c7b5c4d88540e02"] text="My Profile"
+   a[href="/user/contact-info"] text="Contact & Info"
+   a[href="#"] text="Previous"
+   a[href="#"] text="1"
+   a[href="#"] text="2"
+   a[href="#"] text="Next"
+
+📸 Screenshot saved to test-results/discover-debug.png

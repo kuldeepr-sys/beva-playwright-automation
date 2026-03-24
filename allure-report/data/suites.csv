@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","1971","TC-095 [High] Verify all menu options are displaying properly","chromium","2026-03-24","passed","2026-03-24","Menu / Navigation","Menu_Navigation.spec.js","",""
+"","6204","authenticate as player","setup","2026-03-24","passed","2026-03-24","","auth.setup.js","",""
+"","4755","TC-096 [High] Verify user navigates to the correct page for each menu item","chromium","2026-03-24","passed","2026-03-24","Menu / Navigation","Menu_Navigation.spec.js","",""
+"","1587","TC-097 [High] Verify user is able to logout by clicking Logout button","chromium","2026-03-24","passed","2026-03-24","Menu / Navigation","Menu_Navigation.spec.js","",""
