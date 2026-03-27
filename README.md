@@ -45,14 +45,6 @@ npx playwright install --with-deps chromium
 cp .env.example .env
 ```
 
-Your `.env` file (already filled with correct values):
-
-```
-BASE_URL=https://beva.inheritxdev.in
-PLAYER_EMAIL=player1@beva.com
-PLAYER_PASSWORD=Test@123456
-```
-
 ### 3 — Create Auth Directory
 
 ```bash
@@ -66,7 +58,7 @@ mkdir -p fixtures/auth
 npm test
 ```
 
-That's it. The first run logs in automatically and saves the session, then runs all 128 tests.
+That's it. The first run logs in automatically and saves the session, then runs all  tests.
 
 ---
 
