@@ -1,0 +1,146 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e6]:
+      - link "Go to dashboard" [ref=e8] [cursor=pointer]:
+        - /url: /user/dashboard
+        - img "Logo" [ref=e9]
+      - generic [ref=e11]:
+        - generic [ref=e12]: Navigation
+        - list [ref=e14]:
+          - listitem [ref=e15]:
+            - link "Dashboard" [ref=e16] [cursor=pointer]:
+              - /url: /user/dashboard
+              - img [ref=e17]
+              - generic [ref=e22]: Dashboard
+          - listitem [ref=e23]:
+            - link "Discover" [ref=e24] [cursor=pointer]:
+              - /url: /user/discover
+              - img [ref=e25]
+              - generic [ref=e28]: Discover
+          - listitem [ref=e29]:
+            - link "My Competitions" [ref=e30] [cursor=pointer]:
+              - /url: /user/my-competitions
+              - img [ref=e31]
+              - generic [ref=e37]: My Competitions
+          - listitem [ref=e38]:
+            - link "Leaderboard" [ref=e39] [cursor=pointer]:
+              - /url: /user/leaderboard
+              - img [ref=e40]
+              - generic [ref=e43]: Leaderboard
+          - listitem [ref=e44]:
+            - link "Venues" [ref=e45] [cursor=pointer]:
+              - /url: /user/venues
+              - img [ref=e46]
+              - generic [ref=e49]: Venues
+          - listitem [ref=e50]:
+            - link "My Profile" [ref=e51] [cursor=pointer]:
+              - /url: /user/profile/69a8530b4c7b5c4d88540e02
+              - img [ref=e52]
+              - generic [ref=e55]: My Profile
+          - listitem [ref=e56]:
+            - link "Contact & Info" [ref=e57] [cursor=pointer]:
+              - /url: /user/contact-info
+              - img [ref=e58]
+              - generic [ref=e60]: Contact & Info
+      - list [ref=e62]:
+        - listitem [ref=e63]:
+          - button "Logout" [ref=e64] [cursor=pointer]:
+            - img [ref=e65]
+            - generic [ref=e68]: Logout
+    - main [ref=e69]:
+      - generic [ref=e70]:
+        - button "Toggle Sidebar" [ref=e72] [cursor=pointer]:
+          - img
+          - generic [ref=e73]: Toggle Sidebar
+        - link [ref=e75] [cursor=pointer]:
+          - /url: /user/profile/69a8530b4c7b5c4d88540e02
+          - img [ref=e78]
+      - generic [ref=e81]:
+        - generic [ref=e83]:
+          - img "Johnyyyy Smithhhh" [ref=e85]
+          - generic [ref=e86]:
+            - heading "Welcome back, Johnyyyy Smithhhh!" [level=2] [ref=e87]
+            - paragraph [ref=e88]: Ready to compete and improve your game?
+        - generic [ref=e89]:
+          - generic [ref=e90]:
+            - generic [ref=e91]:
+              - generic [ref=e92]: My Rating
+              - img [ref=e93]
+            - paragraph [ref=e96]: "1826"
+            - paragraph [ref=e97]: +0 from last month
+            - paragraph [ref=e98]: "Note: Upon account creation, ratings default to 1500, RD to 350, and volatility to 0.06"
+          - generic [ref=e99]:
+            - generic [ref=e100]:
+              - generic [ref=e101]: Competitions
+              - img [ref=e102]
+            - paragraph [ref=e108]: 4 Total
+            - paragraph [ref=e109]: 1 Wins 3 Losses
+            - paragraph [ref=e110]: "Win Rate: 25.0%"
+        - generic [ref=e112]:
+          - generic [ref=e113]:
+            - generic [ref=e114]:
+              - heading "Upcoming Competitions" [level=3] [ref=e115]: Upcoming Competitions
+              - paragraph [ref=e117]: Your scheduled events
+            - link "View All" [ref=e118] [cursor=pointer]:
+              - /url: /user/my-competitions?status=Upcoming
+              - text: View All
+              - img
+          - table [ref=e121]:
+            - rowgroup [ref=e122]:
+              - row "# Competition Type Discipline Schedule Venue" [ref=e123]:
+                - columnheader "#" [ref=e124]
+                - columnheader "Competition" [ref=e125]
+                - columnheader "Type" [ref=e126]
+                - columnheader "Discipline" [ref=e127]
+                - columnheader "Schedule" [ref=e128]
+                - columnheader "Venue" [ref=e129]
+                - columnheader [ref=e130]
+            - rowgroup [ref=e131]:
+              - row "1 Brisbane 8-Ball Championship individual 8 ball 1 May 2026 – 2 May 2026 Grand Billiard Hall View Details" [ref=e132]:
+                - cell "1" [ref=e133]
+                - cell "Brisbane 8-Ball Championship" [ref=e134]:
+                  - paragraph [ref=e135]: Brisbane 8-Ball Championship
+                - cell "individual" [ref=e136]:
+                  - paragraph [ref=e137]: individual
+                - cell "8 ball" [ref=e138]:
+                  - paragraph [ref=e139]: 8 ball
+                - cell "1 May 2026 – 2 May 2026" [ref=e140]:
+                  - generic [ref=e141]:
+                    - img [ref=e142]
+                    - generic [ref=e144]: 1 May 2026 – 2 May 2026
+                - cell "Grand Billiard Hall" [ref=e145]:
+                  - generic [ref=e146]:
+                    - img [ref=e147]
+                    - generic [ref=e150]: Grand Billiard Hall
+                - cell "View Details" [ref=e151]:
+                  - link "View Details" [ref=e152] [cursor=pointer]:
+                    - /url: /user/my-competitions/69ba43c3ee52e866a1218c61
+                    - generic [ref=e153]: View Details
+                    - img
+              - row "2 Hobart Team Championship teams 9 ball 8 Nov 2026 – 10 Nov 2026 Darwin Cue Sports View Details" [ref=e154]:
+                - cell "2" [ref=e155]
+                - cell "Hobart Team Championship" [ref=e156]:
+                  - paragraph [ref=e157]: Hobart Team Championship
+                - cell "teams" [ref=e158]:
+                  - paragraph [ref=e159]: teams
+                - cell "9 ball" [ref=e160]:
+                  - paragraph [ref=e161]: 9 ball
+                - cell "8 Nov 2026 – 10 Nov 2026" [ref=e162]:
+                  - generic [ref=e163]:
+                    - img [ref=e164]
+                    - generic [ref=e166]: 8 Nov 2026 – 10 Nov 2026
+                - cell "Darwin Cue Sports" [ref=e167]:
+                  - generic [ref=e168]:
+                    - img [ref=e169]
+                    - generic [ref=e172]: Darwin Cue Sports
+                - cell "View Details" [ref=e173]:
+                  - link "View Details" [ref=e174] [cursor=pointer]:
+                    - /url: /user/my-competitions/69a5095a949dc0c841cc6838
+                    - generic [ref=e175]: View Details
+                    - img
+  - region "Notifications alt+T"
+  - alert [ref=e176]
+```

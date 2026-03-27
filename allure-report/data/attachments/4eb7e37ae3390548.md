@@ -1,0 +1,51 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e7]:
+          - generic [ref=e8]:
+            - link "BEVA Logo" [ref=e10] [cursor=pointer]:
+              - /url: /
+              - img "BEVA Logo" [ref=e11]
+            - link "Back to Home" [ref=e12] [cursor=pointer]:
+              - /url: /
+              - img [ref=e13]
+              - text: Back to Home
+          - generic [ref=e15]:
+            - heading "Professional Integrity." [level=3] [ref=e16]:
+              - text: Professional
+              - text: Integrity.
+            - paragraph [ref=e17]: Securing the Australian cue sports arena with advanced glicko-2 protocols and verified network sync.
+        - generic [ref=e18]:
+          - generic [ref=e19]:
+            - img [ref=e21]
+            - generic [ref=e24]: Identity Verified
+          - generic [ref=e25]:
+            - img [ref=e27]
+            - generic [ref=e29]: Real-time Stats Sync
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - heading "Reset Password." [level=2] [ref=e35]:
+            - text: Reset
+            - text: Password.
+          - paragraph [ref=e36]: Enter your email to receive recovery instructions.
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - generic [ref=e39]: Email Address *
+            - generic [ref=e40]:
+              - img [ref=e41]
+              - textbox "name@example.com" [ref=e44]
+          - button "Send Link" [ref=e46] [cursor=pointer]:
+            - generic [ref=e47]:
+              - text: Send Link
+              - img [ref=e48]
+          - link "Back to Login" [ref=e51] [cursor=pointer]:
+            - /url: /login
+    - contentinfo [ref=e52]:
+      - paragraph [ref=e53]: © 2026 BEVA SYSTEMS AUSTRALIA // SYDNEY_UNIT_01
+  - region "Notifications alt+T"
+  - alert [ref=e54]
+```

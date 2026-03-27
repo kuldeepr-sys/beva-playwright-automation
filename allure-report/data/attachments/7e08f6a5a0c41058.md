@@ -1,0 +1,283 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e6]:
+      - link "Go to dashboard" [ref=e8] [cursor=pointer]:
+        - /url: /user/dashboard
+        - img "Logo" [ref=e9]
+      - generic [ref=e11]:
+        - generic [ref=e12]: Navigation
+        - list [ref=e14]:
+          - listitem [ref=e15]:
+            - link "Dashboard" [ref=e16] [cursor=pointer]:
+              - /url: /user/dashboard
+              - img [ref=e17]
+              - generic [ref=e22]: Dashboard
+          - listitem [ref=e23]:
+            - link "Discover" [ref=e24] [cursor=pointer]:
+              - /url: /user/discover
+              - img [ref=e25]
+              - generic [ref=e28]: Discover
+          - listitem [ref=e29]:
+            - link "My Competitions" [ref=e30] [cursor=pointer]:
+              - /url: /user/my-competitions
+              - img [ref=e31]
+              - generic [ref=e37]: My Competitions
+          - listitem [ref=e38]:
+            - link "Leaderboard" [ref=e39] [cursor=pointer]:
+              - /url: /user/leaderboard
+              - img [ref=e40]
+              - generic [ref=e43]: Leaderboard
+          - listitem [ref=e44]:
+            - link "Venues" [ref=e45] [cursor=pointer]:
+              - /url: /user/venues
+              - img [ref=e46]
+              - generic [ref=e49]: Venues
+          - listitem [ref=e50]:
+            - link "My Profile" [ref=e51] [cursor=pointer]:
+              - /url: /user/profile/69a8530b4c7b5c4d88540e02
+              - img [ref=e52]
+              - generic [ref=e55]: My Profile
+          - listitem [ref=e56]:
+            - link "Contact & Info" [ref=e57] [cursor=pointer]:
+              - /url: /user/contact-info
+              - img [ref=e58]
+              - generic [ref=e60]: Contact & Info
+      - list [ref=e62]:
+        - listitem [ref=e63]:
+          - button "Logout" [ref=e64] [cursor=pointer]:
+            - img [ref=e65]
+            - generic [ref=e68]: Logout
+    - main [ref=e69]:
+      - generic [ref=e70]:
+        - button "Toggle Sidebar" [ref=e72] [cursor=pointer]:
+          - img
+          - generic [ref=e73]: Toggle Sidebar
+        - link [ref=e75] [cursor=pointer]:
+          - /url: /user/profile/69a8530b4c7b5c4d88540e02
+          - img [ref=e78]
+      - generic [ref=e81]:
+        - generic [ref=e84]:
+          - heading "Discover" [level=2] [ref=e85]
+          - paragraph [ref=e86]: Find and join top pool and snooker events.
+        - generic [ref=e87]:
+          - generic [ref=e88]:
+            - generic [ref=e89]:
+              - img [ref=e90]
+              - textbox "Search by venue or title..." [ref=e93]
+            - button "All Disciplines" [ref=e96] [cursor=pointer]:
+              - generic [ref=e97]:
+                - img [ref=e98]
+                - generic [ref=e100]: All Disciplines
+              - img [ref=e101]
+            - button "All Types" [ref=e105] [cursor=pointer]:
+              - generic [ref=e106]:
+                - img [ref=e107]
+                - generic [ref=e112]: All Types
+              - img [ref=e113]
+          - paragraph [ref=e116]: Showing 6 of 9 competitions
+          - generic [ref=e117]:
+            - generic [ref=e118]:
+              - generic [ref=e119] [cursor=pointer]:
+                - generic [ref=e120]:
+                  - img "Hobart Team Championship" [ref=e121]
+                  - generic [ref=e124]: "Fee: $250"
+                  - generic [ref=e125]: Upcoming
+                  - generic [ref=e126]:
+                    - generic [ref=e127]:
+                      - generic [ref=e128]: 9-Ball
+                      - generic [ref=e129]: Team
+                      - generic [ref=e130]: 15 Joined
+                      - generic [ref=e131]: 16 Max
+                    - heading "Hobart Team Championship" [level=3] [ref=e132]
+                - generic [ref=e133]:
+                  - generic [ref=e135]:
+                    - generic [ref=e136]:
+                      - paragraph [ref=e137]: Prize Pool
+                      - paragraph [ref=e138]: AUD 6,000
+                    - generic [ref=e139]:
+                      - paragraph [ref=e140]: Venue
+                      - paragraph [ref=e141]: Darwin Cue Sports
+                    - generic [ref=e142]:
+                      - paragraph [ref=e143]: Start Date
+                      - paragraph [ref=e144]: Nov 8, 2026
+                    - generic [ref=e145]:
+                      - paragraph [ref=e146]: End Date
+                      - paragraph [ref=e147]: Nov 10, 2026
+                  - generic [ref=e148]:
+                    - button "Join Competition":
+                      - text: Join Competition
+                      - img
+              - generic [ref=e149] [cursor=pointer]:
+                - generic [ref=e150]:
+                  - img "Brisbane 8-Ball Championship (Clone)" [ref=e151]
+                  - generic [ref=e154]: "Fee: $50"
+                  - generic [ref=e155]: Upcoming
+                  - generic [ref=e156]:
+                    - generic [ref=e157]:
+                      - generic [ref=e158]: 8-Ball
+                      - generic [ref=e159]: Individual
+                      - generic [ref=e160]: 1 Joined
+                      - generic [ref=e161]: 16 Max
+                    - heading "Brisbane 8-Ball Championship (Clone)" [level=3] [ref=e162]
+                - generic [ref=e163]:
+                  - generic [ref=e165]:
+                    - generic [ref=e166]:
+                      - paragraph [ref=e167]: Prize Pool
+                      - paragraph [ref=e168]: AUD 500
+                    - generic [ref=e169]:
+                      - paragraph [ref=e170]: Venue
+                      - paragraph [ref=e171]: Grand Billiard Hall
+                    - generic [ref=e172]:
+                      - paragraph [ref=e173]: Start Date
+                      - paragraph [ref=e174]: May 1, 2026
+                    - generic [ref=e175]:
+                      - paragraph [ref=e176]: End Date
+                      - paragraph [ref=e177]: May 2, 2026
+                  - generic [ref=e178]:
+                    - button "Join Competition":
+                      - text: Join Competition
+                      - img
+              - generic [ref=e179] [cursor=pointer]:
+                - generic [ref=e180]:
+                  - img "Brisbane 8-Ball Championship" [ref=e181]
+                  - generic [ref=e184]: "Fee: $50"
+                  - generic [ref=e185]: Upcoming
+                  - generic [ref=e186]:
+                    - generic [ref=e187]:
+                      - generic [ref=e188]: 8-Ball
+                      - generic [ref=e189]: Individual
+                      - generic [ref=e190]: 8 Joined
+                      - generic [ref=e191]: 16 Max
+                    - heading "Brisbane 8-Ball Championship" [level=3] [ref=e192]
+                - generic [ref=e193]:
+                  - generic [ref=e195]:
+                    - generic [ref=e196]:
+                      - paragraph [ref=e197]: Prize Pool
+                      - paragraph [ref=e198]: AUD 500
+                    - generic [ref=e199]:
+                      - paragraph [ref=e200]: Venue
+                      - paragraph [ref=e201]: Grand Billiard Hall
+                    - generic [ref=e202]:
+                      - paragraph [ref=e203]: Start Date
+                      - paragraph [ref=e204]: May 1, 2026
+                    - generic [ref=e205]:
+                      - paragraph [ref=e206]: End Date
+                      - paragraph [ref=e207]: May 2, 2026
+                  - generic [ref=e208]:
+                    - button "Join Competition":
+                      - text: Join Competition
+                      - img
+              - generic [ref=e209] [cursor=pointer]:
+                - generic [ref=e210]:
+                  - img "TEAMS - Three Stage" [ref=e211]
+                  - generic [ref=e214]: "Fee: $50"
+                  - generic [ref=e215]: Upcoming
+                  - generic [ref=e216]:
+                    - generic [ref=e217]:
+                      - generic [ref=e218]: 9-Ball
+                      - generic [ref=e219]: Team
+                      - generic [ref=e220]: 1 Joined
+                      - generic [ref=e221]: 32 Max
+                    - heading "TEAMS - Three Stage" [level=3] [ref=e222]
+                - generic [ref=e223]:
+                  - generic [ref=e225]:
+                    - generic [ref=e226]:
+                      - paragraph [ref=e227]: Prize Pool
+                      - paragraph [ref=e228]: AUD 1,000
+                    - generic [ref=e229]:
+                      - paragraph [ref=e230]: Venue
+                      - paragraph [ref=e231]: Grand Billiard Hall
+                    - generic [ref=e232]:
+                      - paragraph [ref=e233]: Start Date
+                      - paragraph [ref=e234]: Mar 25, 2026
+                    - generic [ref=e235]:
+                      - paragraph [ref=e236]: End Date
+                      - paragraph [ref=e237]: Mar 27, 2026
+                  - generic [ref=e238]:
+                    - button "Join Competition":
+                      - text: Join Competition
+                      - img
+              - generic [ref=e239] [cursor=pointer]:
+                - generic [ref=e240]:
+                  - img "TEAMS - Two Stage" [ref=e241]
+                  - generic [ref=e244]: "Fee: $50"
+                  - generic [ref=e245]: Upcoming
+                  - generic [ref=e246]:
+                    - generic [ref=e247]:
+                      - generic [ref=e248]: 9-Ball
+                      - generic [ref=e249]: Team
+                      - generic [ref=e250]: 2 Joined
+                      - generic [ref=e251]: 32 Max
+                    - heading "TEAMS - Two Stage" [level=3] [ref=e252]
+                - generic [ref=e253]:
+                  - generic [ref=e255]:
+                    - generic [ref=e256]:
+                      - paragraph [ref=e257]: Prize Pool
+                      - paragraph [ref=e258]: AUD 1,000
+                    - generic [ref=e259]:
+                      - paragraph [ref=e260]: Venue
+                      - paragraph [ref=e261]: Grand Billiard Hall
+                    - generic [ref=e262]:
+                      - paragraph [ref=e263]: Start Date
+                      - paragraph [ref=e264]: Mar 25, 2026
+                    - generic [ref=e265]:
+                      - paragraph [ref=e266]: End Date
+                      - paragraph [ref=e267]: Mar 27, 2026
+                  - generic [ref=e268]:
+                    - button "Join Competition":
+                      - text: Join Competition
+                      - img
+              - generic [ref=e269] [cursor=pointer]:
+                - generic [ref=e270]:
+                  - img "DOUBLES - Three Stage" [ref=e271]
+                  - generic [ref=e274]: "Fee: $50"
+                  - generic [ref=e275]: Upcoming
+                  - generic [ref=e276]:
+                    - generic [ref=e277]:
+                      - generic [ref=e278]: 9-Ball
+                      - generic [ref=e279]: Doubles
+                      - generic [ref=e280]: 3 Joined
+                      - generic [ref=e281]: 32 Max
+                    - heading "DOUBLES - Three Stage" [level=3] [ref=e282]
+                - generic [ref=e283]:
+                  - generic [ref=e285]:
+                    - generic [ref=e286]:
+                      - paragraph [ref=e287]: Prize Pool
+                      - paragraph [ref=e288]: AUD 1,000
+                    - generic [ref=e289]:
+                      - paragraph [ref=e290]: Venue
+                      - paragraph [ref=e291]: Grand Billiard Hall
+                    - generic [ref=e292]:
+                      - paragraph [ref=e293]: Start Date
+                      - paragraph [ref=e294]: Mar 25, 2026
+                    - generic [ref=e295]:
+                      - paragraph [ref=e296]: End Date
+                      - paragraph [ref=e297]: Mar 27, 2026
+                  - generic [ref=e298]:
+                    - button "Join Competition":
+                      - text: Join Competition
+                      - img
+            - navigation "pagination" [ref=e300]:
+              - list [ref=e301]:
+                - listitem [ref=e302]:
+                  - link "Go to previous page":
+                    - /url: "#"
+                    - img
+                    - generic: Previous
+                - listitem [ref=e303]:
+                  - link "1" [ref=e304] [cursor=pointer]:
+                    - /url: "#"
+                - listitem [ref=e305]:
+                  - link "2" [ref=e306] [cursor=pointer]:
+                    - /url: "#"
+                - listitem [ref=e307]:
+                  - link "Go to next page" [ref=e308] [cursor=pointer]:
+                    - /url: "#"
+                    - generic [ref=e309]: Next
+                    - img
+  - region "Notifications alt+T"
+  - alert [ref=e310]
+```
